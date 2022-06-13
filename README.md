@@ -9,5 +9,7 @@ En el directorio docs ejecuta el archivo index.html
 #### :space_invader: Tecnologias
 
 > Javascript
+
 > Html
+
 > Css
