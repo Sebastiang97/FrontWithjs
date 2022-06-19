@@ -7,9 +7,6 @@ body {
   padding: 10px;
   margin: 0;
 }
-.navbar {
-  height: 150px;
-}
 .navbar-brand {
   display: flex;
   flex-direction: column;
