@@ -1,24 +1,54 @@
 import { setData, getData, addDataVolumen } from '../helpers/storage.js'
 
 const playerAudio = () => {
-  setData('audioPreference')
+  setData('reproduce')
   let audioDuration
   const audio = document.querySelector('#audio')
   const play = document.querySelector('#playAudio')
   const backwardSeconds = document.querySelector('#backwardSecondsAudio')
   const forwardSeconds = document.querySelector('#forwardSecondsAudio')
+  const backwardSong = document.querySelector('#backwardSong')
+  const forwardSong = document.querySelector('#forwardSong')
   const control = document.querySelector('#controlAudio')
   const controlVolume = document.querySelector('#controlAudioVolume')
+  const infoId = document.querySelector('#infoId')
+  const infoImg = document.querySelector('#infoImg')
+  const infoTitle = document.querySelector('#infoTitle')
+  const infoArtist = document.querySelector('#infoArtist')
+  const songToReproduce = getData('reproduce').songs
 
+  //Liena 19 al 33 no sirve con la recarga del live server
+  // if (songToReproduce) {
+  //   audio.src = songToReproduce[0].src
+  //   infoImg.src = songToReproduce[0].urlImage
+  //   infoTitle.innerHTML = songToReproduce[0].name
+  //   infoArtist.innerHTML = songToReproduce[0].artist
+  //   infoId.dataset.id = 0
+  // } else {
+  //   audio.src = './assets/test/Foo_Fighters_All_My_Life.mp3'
+  //   infoImg.innerHTML = './assets/test/logo.jpg'
+  //   infoTitle.innerHTML = 'All My Life'
+  //   infoArtist.innerHTML = 'Foo Fighters'
+  // }
   audioDuration = audio.duration
-  console.log(controlVolume.value)
-  controlVolume.value = getData('audioPreference').volumen
+  controlVolume.value = getData('reproduce').volumen
   audio.volume = controlVolume.value / 100
 
+  //lo ideal seria realizar las cargas iniciales si el audio esta cargado
   audio.addEventListener('loadeddata', () => {
+    // if (songToReproduce) {
+    //   audio.src = songToReproduce[0].src
+    //   infoImg.innerHTML = songToReproduce[0].urlImage
+    //   infoTitle.innerHTML = songToReproduce[0].name
+    //   infoArtist.innerHTML = songToReproduce[0].artist
+    // } else {
+    //   audio.src = './assets/test/Foo_Fighters_All_My_Life.mp3'
+    //   infoImg.innerHTML = './assets/test/logo.jpg'
+    //   infoTitle.innerHTML = 'All My Life'
+    //   infoArtist.innerHTML = 'Foo Fighters'
+    // }
     audioDuration = audio.duration
-    console.log(controlVolume.value)
-    controlVolume.value = getData('audioPreference').volumen
+    controlVolume.value = getData('reproduce').volumen
     audio.volume = controlVolume.value / 100
   })
 
@@ -28,11 +58,7 @@ const playerAudio = () => {
   })
 
   play.onclick = () => {
-    if (audio.paused) {
-      audio.play()
-    } else {
-      audio.pause()
-    }
+    audio.paused ? audio.play() : audio.pause()
   }
 
   backwardSeconds.onclick = () => {
@@ -42,6 +68,24 @@ const playerAudio = () => {
     audio.currentTime = audio.currentTime + 10
   }
 
+  forwardSong.addEventListener('click', (event) => {
+    let id = parseInt(infoId.dataset.id)
+    const arrLength = songToReproduce.length - 1
+    if (id === arrLength) {
+      audio.src = songToReproduce[0].src
+      infoImg.src = songToReproduce[0].urlImage
+      infoTitle.innerHTML = songToReproduce[0].name
+      infoArtist.innerHTML = songToReproduce[0].artist
+      infoId.dataset.id = 0
+      return ''
+    }
+    audio.src = songToReproduce[id + 1].src
+    infoImg.src = songToReproduce[id + 1].urlImage
+    infoTitle.innerHTML = songToReproduce[id + 1].name
+    infoArtist.innerHTML = songToReproduce[id + 1].artist
+    infoId.dataset.id = songToReproduce[id + 1].id
+  })
+
   control.oninput = (event) => {
     audio.currentTime = (audioDuration / 100) * event.target.value
   }
@@ -49,7 +93,7 @@ const playerAudio = () => {
   controlVolume.oninput = (event) => {
     const volumen = event.target.value
     audio.volume = volumen / 100
-    addDataVolumen('audioPreference', volumen)
+    addDataVolumen('reproduce', volumen)
   }
 }
 
