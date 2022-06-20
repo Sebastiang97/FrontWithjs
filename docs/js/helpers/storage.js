@@ -13,6 +13,14 @@ const getData = (ref) => {
   return JSON.parse(data)
 }
 
+const getListById = (id) => {
+  const lists = getData('lists').lists
+
+  const list = lists.find((list) => list.id === id)
+
+  return list
+}
+
 const addDataList = (ref, data) => {
   data.id = Date.now()
   data.date = generateDate()
@@ -37,6 +45,19 @@ const addSongToList = (ref, id, songData) => {
   localStorage.setItem(ref, JSON.stringify(oldData))
 }
 
+const addSongToReproduce = (ref, songData) => {
+  const oldData = getData(ref)
+  console.log(!oldData.songs)
+  !oldData.songs && (oldData.songs = [])
+  console.log(oldData.songs)
+
+  const isSong = oldData.songs.some((song) => song.id === songData.id)
+  if (!isSong) {
+    oldData.songs.push(songData)
+  }
+  localStorage.setItem(ref, JSON.stringify(oldData))
+}
+
 const addDataVolumen = (ref, data) => {
   const oldData = getData(ref)
   if (!oldData.volumen) {
@@ -46,4 +67,12 @@ const addDataVolumen = (ref, data) => {
   localStorage.setItem(ref, JSON.stringify(oldData))
 }
 
-export { setData, getData, addDataList, addDataVolumen, addSongToList }
+export {
+  setData,
+  getData,
+  addDataList,
+  addDataVolumen,
+  addSongToList,
+  getListById,
+  addSongToReproduce,
+}
