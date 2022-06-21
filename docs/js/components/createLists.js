@@ -1,5 +1,5 @@
 import { setData, addDataList } from '../helpers/storage.js'
-import { renderAll } from '../helpers/render.js'
+import { renderAll, renderLists } from '../helpers/render.js'
 import { addSongs } from './addSong.js'
 
 const createLists = () => {
@@ -11,8 +11,8 @@ const createLists = () => {
   setData('lists')
 
   resOffCanvas.innerHTML = renderAll()
-  resAddSong.innerHTML = renderAll()
-  addSongs()
+  resAddSong.innerHTML = renderLists()
+
   formCreateList.addEventListener('submit', (e) => {
     e.preventDefault()
     const list = {
@@ -23,8 +23,9 @@ const createLists = () => {
     formCreateList.reset()
 
     resOffCanvas.innerHTML = renderAll()
-    resAddSong.innerHTML = renderAll()
-    addSongs()
+    resAddSong.innerHTML = renderLists()
+
+    console.log(alert)
     alert.classList.toggle('d-none')
     setTimeout(() => {
       alert.classList.toggle('d-none')

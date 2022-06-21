@@ -45,16 +45,24 @@ const addSongToList = (ref, id, songData) => {
   localStorage.setItem(ref, JSON.stringify(oldData))
 }
 
-const addSongToReproduce = (ref, songData) => {
+const addSongToReproduce = (ref, songsData, idList, idSong) => {
   const oldData = getData(ref)
-  console.log(!oldData.songs)
-  !oldData.songs && (oldData.songs = [])
-  console.log(oldData.songs)
-
-  const isSong = oldData.songs.some((song) => song.id === songData.id)
-  if (!isSong) {
-    oldData.songs.push(songData)
+  if (!oldData.songs) {
+    oldData.songs = []
+    oldData.songs = songsData
   }
+  !oldData.idList && (oldData.idList = idList)
+
+  if (oldData.idList !== idList) {
+    oldData.idList = idList
+    oldData.songs = songsData
+    console.log('cambio de lista')
+  }
+  oldData.idsong = idSong
+
+  //const isSong = oldData.songs.some((song) => song.id === songData.id)
+  // if (!isSong) {
+  // }
   localStorage.setItem(ref, JSON.stringify(oldData))
 }
 

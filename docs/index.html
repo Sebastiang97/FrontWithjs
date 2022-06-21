@@ -39,7 +39,7 @@
       <nav class="navbar bg-dark">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="./assets/Captura_de_pantalla_2022-06-12_002910-removebg-preview.png" alt="" width="100"
+            <img src="./assets/images/Captura_de_pantalla_2022-06-12_002910-removebg-preview.png" alt="" width="100"
               height="24">
             <p>Kuroneko Music</p>
           </a>
@@ -101,7 +101,11 @@
       <div class="card-body">
         <h5 class="card-title">Can't go back</h5>
         <p class="card-text">Single 2018</p>
-        <a href="#" class="btn btn-outline-success">Check it out</a>
+        <a href="#"
+          class="btn btn-outline-success songs"
+          data-bs-toggle="modal" 
+          data-bs-target="#addSong"
+          data-id="1">Check it out (add Songs Test)</a>
       </div>
     </div>
 
@@ -114,7 +118,7 @@
           class="btn btn-outline-success songs"
           data-bs-toggle="modal" 
           data-bs-target="#addSong"
-          data-id="1">Check it out</a>
+          data-id="2">Check it out (add Songs Test)</a>
       </div>
     </div>
 
@@ -123,7 +127,11 @@
       <div class="card-body">
         <h5 class="card-title">Ningyo</h5>
         <p class="card-text">Single 2018</p>
-        <a href="#" class="btn btn-outline-success">Check it out</a>
+        <a href="#"
+          class="btn btn-outline-success songs"
+          data-bs-toggle="modal" 
+          data-bs-target="#addSong"
+          data-id="3">Check it out (add Songs Test)</a>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
@@ -136,8 +144,8 @@
           class="btn btn-outline-success songs"
           data-bs-toggle="modal" 
           data-bs-target="#addSong"
-          data-id="2"
-        >Check it out</a>
+          data-id="4"
+        >Check it out (add Songs Test)</a>
       </div>
     </div>
   </div>
@@ -212,9 +220,7 @@
         <div class="carousel-item">
           
         </div>
-        
       </div>
-      
     </div>
       
       
@@ -270,7 +276,7 @@
     <div class="modal-dialog  modal-dialog-centered">
       <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h5 class="modal-title text-white" id="createListLabel">Modal title</h5>
+          <h5 class="modal-title text-white" id="createListLabel">Crea tu lista</h5>
           <button type="button" class="btn-close bgd-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -279,7 +285,7 @@
               <label class="text-white">Nombre de la lista</label>
               <input type="text" name="name" class="form-control"  placeholder="Nombre de la lista">
             </div>
-            <button type="submit" data-bs-dismiss="modal" class="btn btn-light my-3">Submit</button>
+            <button type="submit" data-bs-dismiss="modal" class="btn btn-light my-3">Crear</button>
           </form>
         </div>
       </div>
@@ -292,7 +298,6 @@
   </div>
 
   <div class="reproduction w-100 bg-dark text-white">
-    <a href="./songs.html?list=1655611826128&song=1">test</a>
     <audio id="audio" src="./assets/test/Foo_Fighters_All_My_Life.mp3"></audio>
     <section class="audio-buttons">
       <button id="backwardSecondsAudio">-10</button>

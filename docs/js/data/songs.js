@@ -17,6 +17,24 @@ const songs = [
     album: 'The Colour and the Shape',
     year: '1997',
   },
+  {
+    id: 3,
+    name: 'Best of You',
+    src: './assets/test/Foo_Fighters_Best_Of_You.mp3',
+    urlImage: './assets/test/logo2.jpg',
+    artist: 'Foo Fighters',
+    album: 'The Colour and the Shape',
+    year: '1997',
+  },
+  {
+    id: 4,
+    name: 'Everlong',
+    src: './assets/test/Foo_Fighters_Everlong.mp3',
+    urlImage: './assets/test/logo3.jpg',
+    artist: 'Foo Fighters',
+    album: 'The Colour and the Shape',
+    year: '1997',
+  },
 ]
 
 const getSongById = (id) => {
