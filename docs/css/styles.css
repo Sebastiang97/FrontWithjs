@@ -32,11 +32,11 @@ body {
   width: 100%;
   justify-content: space-evenly;
 }
-.navbar-toggler-icon {
-  outline-color: white;
-}
 .nav-item {
   cursor: pointer;
+}
+.color-white {
+  border-color: white !important;
 }
 .title {
   background-color: black;

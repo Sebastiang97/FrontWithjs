@@ -18,10 +18,9 @@
     color: #fff;
     overflow: auto; 
 }
-
 .form-container h1 {
-    width: 90%;
-    margin: 10px;
+    width: 80%;
+    margin: 20px;
     font-family: sans-serif;
     font-size: 19px;
     display: flex;
