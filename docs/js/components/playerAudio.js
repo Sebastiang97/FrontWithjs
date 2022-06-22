@@ -1,21 +1,22 @@
 import { setData, getData, addDataVolumen } from '../helpers/storage.js'
 
+const audio = document.querySelector('#audio')
+const play = document.querySelector('#playAudio')
+const backwardSeconds = document.querySelector('#backwardSecondsAudio')
+const forwardSeconds = document.querySelector('#forwardSecondsAudio')
+const backwardSong = document.querySelector('#backwardSong')
+const forwardSong = document.querySelector('#forwardSong')
+const control = document.querySelector('#controlAudio')
+const controlVolume = document.querySelector('#controlAudioVolume')
+const infoId = document.querySelector('#infoId')
+const infoImg = document.querySelector('#infoImg')
+const infoTitle = document.querySelector('#infoTitle')
+const infoArtist = document.querySelector('#infoArtist')
+const songToReproduce = getData('reproduce').songs
+
 const playerAudio = () => {
   setData('reproduce')
   let audioDuration
-  const audio = document.querySelector('#audio')
-  const play = document.querySelector('#playAudio')
-  const backwardSeconds = document.querySelector('#backwardSecondsAudio')
-  const forwardSeconds = document.querySelector('#forwardSecondsAudio')
-  const backwardSong = document.querySelector('#backwardSong')
-  const forwardSong = document.querySelector('#forwardSong')
-  const control = document.querySelector('#controlAudio')
-  const controlVolume = document.querySelector('#controlAudioVolume')
-  const infoId = document.querySelector('#infoId')
-  const infoImg = document.querySelector('#infoImg')
-  const infoTitle = document.querySelector('#infoTitle')
-  const infoArtist = document.querySelector('#infoArtist')
-  const songToReproduce = getData('reproduce').songs
 
   //Liena 19 al 33 no sirve con la recarga del live server
   // if (songToReproduce) {
@@ -68,22 +69,16 @@ const playerAudio = () => {
     audio.currentTime = audio.currentTime + 10
   }
 
+  backwardSong.addEventListener('click', (event) => {
+    let id = parseInt(infoId.dataset.id)
+    const arrLength = songToReproduce.length - 1
+    BackwardBtnSong(id, arrLength)
+  })
+
   forwardSong.addEventListener('click', (event) => {
     let id = parseInt(infoId.dataset.id)
     const arrLength = songToReproduce.length - 1
-    if (id === arrLength) {
-      audio.src = songToReproduce[0].src
-      infoImg.src = songToReproduce[0].urlImage
-      infoTitle.innerHTML = songToReproduce[0].name
-      infoArtist.innerHTML = songToReproduce[0].artist
-      infoId.dataset.id = 0
-      return ''
-    }
-    audio.src = songToReproduce[id + 1].src
-    infoImg.src = songToReproduce[id + 1].urlImage
-    infoTitle.innerHTML = songToReproduce[id + 1].name
-    infoArtist.innerHTML = songToReproduce[id + 1].artist
-    infoId.dataset.id = songToReproduce[id + 1].id
+    fordwardBtnSong(id, arrLength)
   })
 
   control.oninput = (event) => {
@@ -94,6 +89,32 @@ const playerAudio = () => {
     const volumen = event.target.value
     audio.volume = volumen / 100
     addDataVolumen('reproduce', volumen)
+  }
+}
+
+const fordwardBtnSong = (id, arrLength) => {
+  if (id === arrLength) {
+    audio.src = songToReproduce[0].src
+    infoImg.src = songToReproduce[0].urlImage
+    infoTitle.innerHTML = songToReproduce[0].name
+    infoArtist.innerHTML = songToReproduce[0].artist
+    infoId.dataset.id = 0
+  } else {
+    audio.src = songToReproduce[id + 1].src
+    infoImg.src = songToReproduce[id + 1].urlImage
+    infoTitle.innerHTML = songToReproduce[id + 1].name
+    infoArtist.innerHTML = songToReproduce[id + 1].artist
+    infoId.dataset.id = parseInt(infoId.dataset.id) + 1
+  }
+}
+
+const BackwardBtnSong = (id, arrLength) => {
+  if (id > 0) {
+    audio.src = songToReproduce[id - 1].src
+    infoImg.src = songToReproduce[id - 1].urlImage
+    infoTitle.innerHTML = songToReproduce[id - 1].name
+    infoArtist.innerHTML = songToReproduce[id - 1].artist
+    infoId.dataset.id = parseInt(infoId.dataset.id) - 1
   }
 }
 

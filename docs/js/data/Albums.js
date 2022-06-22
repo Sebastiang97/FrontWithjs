@@ -2,7 +2,9 @@ const albums = [
   {
     id: 1,
     album: 'All My life',
-    canciones: [
+    artist: 'Foo Fighters',
+    urlAlbum: './assets/test/logo.jpg',
+    songs: [
       {
         id: 1,
         name: 'All My Life',
@@ -42,3 +44,8 @@ const albums = [
     ],
   },
 ]
+const getAlbumsById = (id) => {
+  return albums.find((album) => album.id === id)
+}
+
+export { albums, getAlbumsById }
