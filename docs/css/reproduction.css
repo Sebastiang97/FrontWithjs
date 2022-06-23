@@ -1,5 +1,5 @@
 .reproduction {
-  position: fixed;
+
   bottom: 0;
   left: 0;
   height: 100px;
@@ -7,14 +7,11 @@
   display: flex;
   padding-top: 10px;
 }
-
-
 .reproduccion__volume {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .reproduccion__autor {
   display: flex;
   align-items: center;
@@ -22,24 +19,18 @@
   flex-wrap: wrap;
   padding-left: 5em;
 }
-
 .reproduccion__autor-name {
   width: 100%;
 }
-
 .reproduccion__autor-sound {
   width: 100%;
 }
-
-
 .reproduccion__controls {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-
 .audio-buttons {
   background-color: transparent;
   border-color: transparent;
@@ -48,7 +39,9 @@
   width: 40px;
   height: 40px;
 }
-
+.audio-buttons:hover {
+  color: #408558;
+}
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; } /* Default */
 .material-icons.md-36 { font-size: 36px; }
