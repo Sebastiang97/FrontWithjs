@@ -82,75 +82,6 @@
 
 
   <div class="album-cards">
-    <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-           <div class="row">
-              <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                  <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
-                  <div class="card-body">
-                    <h5 class="card-title">Can't go back</h5>
-                    <p class="card-text">Single 2018</p>
-                    <a href="./album.html?album=1" class="btn btn-outline-success songs" >album</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                  <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
-                  <div class="card-body">
-                    <h5 class="card-title">Can't go back</h5>
-                    <p class="card-text">Single 2018</p>
-                    <a href="./album.html?album=1" class="btn btn-outline-success songs" >album</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                  <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
-                  <div class="card-body">
-                    <h5 class="card-title">Can't go back</h5>
-                    <p class="card-text">Single 2018</p>
-                    <a href="./album.html?album=1" class="btn btn-outline-success songs" >album</a>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
-            <div class="card-body">
-              <h5 class="card-title">Can't go back</h5>
-              <p class="card-text">Single 2018</p>
-              <a href="#" class="btn btn-outline-success songs" data-bs-toggle="modal" data-bs-target="#addSong"
-                data-id="1">Check it out (add Songs Test)</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
-            <div class="card-body">
-              <h5 class="card-title">Can't go back</h5>
-              <p class="card-text">Single 2018</p>
-              <a href="#" class="btn btn-outline-success songs" data-bs-toggle="modal" data-bs-target="#addSong"
-                data-id="1">Check it out (add Songs Test)</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- 
     <div class="card" style="width: 18rem;">
       <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
       <div class="card-body">
@@ -159,6 +90,8 @@
         <a href="./album.html?album=1" class="btn btn-outline-success songs" >album</a>
       </div>
     </div>
+
+
     <div class="card" style="width: 18rem;">
       <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
       <div class="card-body">
@@ -196,7 +129,7 @@
         <a href="#" class="btn btn-outline-success songs" data-bs-toggle="modal" data-bs-target="#addSong"
           data-id="4">Check it out (add Songs Test)</a>
       </div>
-    </div> -->
+    </div>
   </div>
 
   <div class="favorites my-5">
@@ -358,17 +291,46 @@
   </div>
 
   <div class="reproduction w-100 bg-dark text-white">
-    <audio id="audio" src="./assets/test/Foo_Fighters_All_My_Life.mp3"></audio>
-    <section class="audio-buttons">
-      <button id="backwardSecondsAudio">-10</button>
-      <button id="backwardSong">
-        <<</button>
-          <button id="playAudio">Play/Pause</button>
-          <button id="forwardSong">>></button>
-          <button id="forwardSecondsAudio">+10</button>
+    <div class="col-4 reproduccion__autor">
+      <p class="reproduccion__autor-name">Autor</p>
+      <p class="reproduccion__autor-sound">nombre cancion</p>
+    </div>
+    <div class="col-4 reproduccion__controls">
+      <audio id="audio" src="./assets/test/Foo_Fighters_All_My_Life.mp3"></audio>
+        <div class="audio-buttons__controls">
+          <button class="audio-buttons" id="backwardSecondsAudio">
+            <span class="material-icons md-36">
+              replay_10
+            </span>
+          </button>
+          <button class="audio-buttons" id="backwardSong">
+            <span class="material-icons md-36">
+              skip_previous
+            </span>
+          </button>
+              <button class="audio-buttons" id="playAudio">
+                <span class="material-icons md-36">
+                  play_circle
+                </span>
+              </button>
+              <button class="audio-buttons" id="forwardSong">
+                <span class="material-icons md-36">
+                  skip_next
+                </span>
+              </button>
+              <button class="audio-buttons" id="forwardSecondsAudio">
+                <i class="material-icons md-36">
+                  forward_10
+                </i>
+              </button>
+        </div>
+        <div class="audio-buttons__progress">
           <input type="range" id="controlAudio" min="0" max="100" step="0.1" value="0" />
-          <input type="range" id="controlAudioVolume" min="0" max="100" step="0.1" value="100" />
-    </section>
+        </div>
+    </div>
+    <div class="col-4 reproduccion__volume">
+      <input type="range" id="controlAudioVolume" min="0" max="100" step="0.1" value="100" />
+    </div>
 
   </div>
 
