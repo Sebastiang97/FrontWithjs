@@ -25,6 +25,11 @@
 </head>
 
 <body>
+  <style>
+    #deleteList{
+      display:none
+    }
+  </style>
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
       <nav class="navbar bg-dark">
@@ -76,10 +81,14 @@
     <div class="title-text">
       <button 
         class="btn btn-outline-success" 
+        data-bs-toggle="offcanvas" 
+        data-bs-target="#favorites"
+      >Mis Listas </button>
+      <button 
+        class="btn btn-outline-success" 
         data-bs-toggle="modal" 
         data-bs-target="#createList"
       >Create list </button>
-
     </div>
   </div>
 
@@ -163,19 +172,28 @@
             </div>
             <div class="col-sm-3">
               <div class="card-favorites">
-                <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
+                <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
                 <div class="card-body">
-                  <h5 class="card-title">Nature</h5>
-                  <p class="card-text">Single 2017</p>
+                  <h5 class="card-title">Can't go back</h5>
+                  <p class="card-text">Single 2018</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="card-favorites">
-                <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
+                <img src="./assets/albums/Darkside Madness_Single 2018.jpg" class="card-img-top" alt="Album picture">
                 <div class="card-body">
-                  <h5 class="card-title">Nature</h5>
-                  <p class="card-text">Single 2017</p>
+                  <h5 class="card-title">Darkside Madness</h5>
+                  <p class="card-text">Single 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-favorites">
+                <img src="./assets/albums/Down on my mind_2020 EP.jpg" class="card-img-top" alt="Album picture">
+                <div class="card-body">
+                  <h5 class="card-title">Down on my mind</h5>
+                  <p class="card-text">EP 2020</p>
                 </div>
               </div>
             </div>
@@ -186,10 +204,60 @@
           <div class="row">
             <div class="col-sm-3">
               <div class="card-favorites">
-                <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
+                <img src="./assets/albums/Hashira_ Single 2020.jpg" class="card-img-top" alt="Album picture">
                 <div class="card-body">
-                  <h5 class="card-title">Nature</h5>
-                  <p class="card-text">Single 2017</p>
+                  <h5 class="card-title">Hashira</h5>
+                  <p class="card-text">Single 2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-favorites">
+                <img src="./assets/albums/Ningyo_Single 2018.jpg" class="card-img-top" alt="Album picture">
+                <div class="card-body">
+                  <h5 class="card-title">Ningyo</h5>
+                  <p class="card-text">Single 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-favorites">
+                <img src="./assets/albums/Modular Dreams Single 2018.jpg" class="card-img-top" alt="Album picture">
+                <div class="card-body">
+                  <h5 class="card-title">Modular Dreams</h5>
+                  <p class="card-text">Single 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-favorites">
+                <img src="./assets/albums/Red Veil_EP 2019.jpg" class="card-img-top" alt="Album picture">
+                <div class="card-body">
+                  <h5 class="card-title">Red Veil</h5>
+                  <p class="card-text">EP 2019</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="card-favorites">
+                <img src="./assets/albums/Sweet Nightmare_ Single 2020.jpg" class="card-img-top" alt="Album picture">
+                <div class="card-body">
+                  <h5 class="card-title">Sweet Nightmare</h5>
+                  <p class="card-text">Single 2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-favorites">
+                <img src="./assets/albums/When she smiles_Single 2015.jpg" class="card-img-top" alt="Album picture">
+                <div class="card-body">
+                  <h5 class="card-title">When she smiles</h5>
+                  <p class="card-text">Single 2015</p>
                 </div>
               </div>
             </div>
@@ -204,19 +272,10 @@
             </div>
             <div class="col-sm-3">
               <div class="card-favorites">
-                <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
+                <img src="./assets/albums/J..A.N.A_Single 2013.jpg" class="card-img-top" alt="Album picture">
                 <div class="card-body">
-                  <h5 class="card-title">Nature</h5>
-                  <p class="card-text">Single 2017</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="card-favorites">
-                <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
-                <div class="card-body">
-                  <h5 class="card-title">Nature</h5>
-                  <p class="card-text">Single 2017</p>
+                  <h5 class="card-title">J.A.N.A</h5>
+                  <p class="card-text">Single 2013</p>
                 </div>
               </div>
             </div>
