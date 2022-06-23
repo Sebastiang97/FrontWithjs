@@ -74,7 +74,11 @@
   <div class="title">
 
     <div class="title-text">
-      <button class="btn btn-outline-success" data-bs-toggle="offcanvas" href="#favorites">Create list </button>
+      <button 
+        class="btn btn-outline-success" 
+        data-bs-toggle="modal" 
+        data-bs-target="#createList"
+      >Create list </button>
 
     </div>
   </div>
@@ -238,7 +242,8 @@
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#createList"
+      <button type="button" class="btn btn-info" data-bs-toggle="modal"
+              data-bs-target="#createList" 
         data-bs-dismiss="offcanvas">
         Create List +
       </button>
@@ -262,7 +267,6 @@
       </div>
     </div>
   </div>
-  http://127.0.0.1:5500/docs/songs.html?list=1655776904654
 
   <!-- Modal para crear listas-->
   <div class="modal  fade" id="createList" tabindex="-1" aria-hidden="true">
@@ -278,7 +282,12 @@
               <label class="text-white">Nombre de la lista</label>
               <input type="text" name="name" class="form-control" placeholder="Nombre de la lista">
             </div>
-            <button type="submit" data-bs-dismiss="modal" class="btn btn-light my-3">Crear</button>
+            <button 
+              type="submit" 
+              data-bs-dismiss="modal" 
+               
+              class="btn btn-light my-3"
+            >Crear</button>
           </form>
         </div>
       </div>

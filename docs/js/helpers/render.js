@@ -10,7 +10,6 @@ const renderAll = () => {
 
   if (lists) {
     lists.map(({ id, name, owner, date }, i) => {
-      //const songs = renderSongs(i, id)
       res += `
           <a href="./songs.html?list=${id}" class="list-group-item bg-dark border border-light text-light list-group-item-action my-3" >
             <div class="d-flex w-100 justify-content-between">
