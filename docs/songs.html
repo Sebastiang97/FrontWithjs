@@ -61,6 +61,9 @@
           <li class="nav-item">
             <a class="nav-link" href="./Albums.html">Albums</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./songs.html">Lists</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,21 +75,19 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        
       </div>
     </div>
   </nav>
 
   <div class="title">
 
-    <h1>All albums </h1>
-
-    <div class="  d-flex align-items-center ">
-      <h4 class="text-white" data-bs-toggle="modal" data-bs-target="#createList" >Create list <i class="material-icons pt-3" style="font-size:20px;color:white;">add</i> </h4>
-
+    <div class="title-text">
+      <button 
+        class="btn btn-outline-success" 
+        data-bs-toggle="modal" 
+        data-bs-target="#createList"
+      >Create list </button>
     </div>
   </div>
 
@@ -170,7 +171,7 @@
 
   
 
-  <div class="reproduction w-100 bg-dark text-white">
+  <div class="reproduction position-absolute w-100 bg-dark text-white">
     <div class="col-4 reproduccion__autor" id="infoId" data-id="1">
       <div class=" ">
         <img id="infoImg" src="./assets/test/logo.jpg" style="width:65px" alt="">
@@ -217,11 +218,9 @@
       <input type="range" id="controlAudioVolume" min="0" max="100" step="0.1" value="100" />
     </div>
 
+    
   </div>
 
-  <footer>
-    Made with 🤍 by <br> DMV and SSG <br>
-  </footer>
 
     <script src="js/app.js" type="module"></script>
     <script src="./js/components/pararmsSongs.js" type="module"></script>

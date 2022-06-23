@@ -170,7 +170,7 @@
 
   
 
-  <div class="reproduction w-100 bg-dark text-white">
+  <!-- <div class="reproduction w-100 bg-dark text-white">
     <div class="p-3 d-flex justify-content-start" id="infoId" data-id="1">
         <div class="float-start ">
             <img id="infoImg" src="./assets/test/logo.jpg" style="width:50px" alt="">
@@ -205,11 +205,58 @@
       />
     </section>
     
-  </div>
+  </div> -->
 
-  <footer>
-    Made with 🤍 by <br> DMV and SSG <br>
-  </footer>
+  <div class="reproduction position-absolute w-100 bg-dark text-white">
+    <div class="col-4 reproduccion__autor" id="infoId" data-id="1">
+      <div class=" ">
+        <img id="infoImg" src="./assets/test/logo.jpg" style="width:65px" alt="">
+      </div>
+      <div class="mx-3">
+        <div class="reproduccion__autor-name" id="infoTitle">Autor</div>
+        <div class="reproduccion__autor-sound text-muted" id="infoArtist">nombre cancion</div>
+      </div>
+    </div>
+    <div class="col-4 reproduccion__controls">
+      <audio id="audio" src="./assets/test/Foo_Fighters_All_My_Life.mp3"></audio>
+        <div class="audio-buttons__controls">
+          <button class="audio-buttons" id="backwardSecondsAudio">
+            <span class="material-icons md-36">
+              replay_10
+            </span>
+          </button>
+          <button class="audio-buttons" id="backwardSong">
+            <span class="material-icons md-36">
+              skip_previous
+            </span>
+          </button>
+          <button class="audio-buttons" id="playAudio">
+            <span class="material-icons md-36">
+              play_circle
+            </span>
+          </button>
+          <button class="audio-buttons" id="forwardSong">
+            <span class="material-icons md-36">
+              skip_next
+            </span>
+          </button>
+          <button class="audio-buttons" id="forwardSecondsAudio">
+            <i class="material-icons md-36">
+              forward_10
+            </i>
+          </button>
+        </div>
+        <div class="audio-buttons__progress">
+          <input type="range" id="controlAudio" min="0" max="100" step="0.1" value="0" />
+        </div>
+    </div>
+    <div class="col-4 reproduccion__volume">
+      <input type="range" id="controlAudioVolume" min="0" max="100" step="0.1" value="100" />
+    </div>
+
+    
+  </div>
+  
 
     <script src="js/app.js" type="module"></script>
     <script src="./js/components/paramasAlbum.js" type="module"></script>

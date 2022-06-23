@@ -10,10 +10,15 @@ import {
 const listAndSongs = () => {
   setData('reproduce')
   const idList = getParams('list')
+  console.log(idList)
   const resList = document.querySelector('#resList')
   const resSong = document.querySelector('#resSong')
   const formCreateList = document.querySelector('#formCreateList')
   const alert = document.querySelector('#alert')
+
+  if (!idList) {
+    resList.innerHTML = renderAll()
+  }
 
   resSong.innerHTML = renderOneList(parseInt(idList))
   resList.innerHTML = renderAll()

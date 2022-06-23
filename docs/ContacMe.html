@@ -72,6 +72,9 @@
             <li class="nav-item">
               <a class="nav-link" href="./Albums.html">Albums</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./songs.html">Lists</a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -92,17 +95,6 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -209,8 +201,50 @@
           </textarea>
         </div>
 
-        <button type="submit" class="btn btn-outline-success">Submit</button>
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          data-bs-toggle="modal"
+          data-bs-target="#submit"
+        >
+          Submit
+        </button>
       </form>
+    </div>
+    <div
+      class="modal fade"
+      id="submit"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title text-white" id="exampleModalLabel">
+              Message sent
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-white">
+            Your message has been sent out!
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-outline-success"
+            >
+              Come back to page
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>

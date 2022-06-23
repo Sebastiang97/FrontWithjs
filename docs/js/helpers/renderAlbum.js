@@ -5,7 +5,7 @@ const renderAlbum = (idList) => {
   const { album, artist, urlAlbum, songs } = getAlbumsById(idList)
   const songsOfAlbum = renderSongsOfAlbum(songs, idList)
   res += `
-    <div class="row">
+    <div class="row ">
       <div class="col-sm-4 d-flex justify-content-center">
         <div class="card" style="width: 100%">
           <img
