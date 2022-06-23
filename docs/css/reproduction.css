@@ -15,9 +15,9 @@
 .reproduccion__autor {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  padding-left: 5em;
+  padding-left: 3em;
 }
 .reproduccion__autor-name {
   width: 100%;
@@ -53,6 +53,3 @@
   justify-content: center;
 }
 
-.audio-buttons__progress {
-
-}
