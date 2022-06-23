@@ -59,6 +59,7 @@ const playerAudio = () => {
   })
 
   play.onclick = () => {
+    console.log('hola')
     audio.paused ? audio.play() : audio.pause()
   }
 

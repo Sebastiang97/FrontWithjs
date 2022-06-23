@@ -48,4 +48,28 @@ const getAlbumsById = (id) => {
   return albums.find((album) => album.id === id)
 }
 
-export { albums, getAlbumsById }
+const albumsInitials = [
+  {
+    id: 1,
+    album: "Can't go back",
+    single: 'Single 2018',
+    artist: 'Fabian Lozano',
+    urlAlbum: "./assets/albums/Can't go back_Single 2018.jpg",
+  },
+  {
+    id: 2,
+    album: 'Darkside Madness',
+    single: 'Single 2018',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Darkside Madness_Single 2018.jpg',
+  },
+  {
+    id: 3,
+    album: 'Ningyo',
+    single: 'Single 2018',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Ningyo_Single 2018.jpg',
+  },
+]
+
+export { albums, getAlbumsById, albumsInitials }

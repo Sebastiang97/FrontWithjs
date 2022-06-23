@@ -1,4 +1,4 @@
-import { renderOneList, renderAll } from '../helpers/render.js'
+import { renderOneList, renderAll } from '../helpers/renderList.js'
 import { setData, getData, addSongToReproduce } from '../helpers/storage.js'
 
 const listAndSongs = () => {

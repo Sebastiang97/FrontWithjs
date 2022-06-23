@@ -8,7 +8,6 @@
   padding-top: 10px;
 }
 
-
 .reproduccion__volume {
   display: flex;
   align-items: center;
@@ -20,7 +19,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-left: 5em;
+  padding-left: 1em;
 }
 
 .reproduccion__autor-name {
@@ -31,14 +30,12 @@
   width: 100%;
 }
 
-
 .reproduccion__controls {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 
 .audio-buttons {
   background-color: transparent;
@@ -49,10 +46,18 @@
   height: 40px;
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; } /* Default */
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+} /* Default */
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
 
 .audio-buttons__controls {
   width: 100%;
@@ -61,5 +66,4 @@
 }
 
 .audio-buttons__progress {
-
 }

@@ -1,6 +1,5 @@
 import { setData, addDataList } from '../helpers/storage.js'
-import { renderAll, renderLists } from '../helpers/render.js'
-import { addSongs } from './addSong.js'
+import { renderAll, renderLists } from '../helpers/renderList.js'
 
 const createLists = () => {
   const formCreateList = document.querySelector('#formCreateList')

@@ -91,18 +91,17 @@
       <div class="card-body">
         <h5 class="card-title">Can't go back</h5>
         <p class="card-text">Single 2018</p>
-        <a href="./album.html?album=1" class="btn btn-outline-success songs" >album</a>
+        <a href="./album.html?album=1" class="btn btn-outline-success songs" 
+          >album</a>
       </div>
     </div>
-
-
     <div class="card" style="width: 18rem;">
       <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
       <div class="card-body">
         <h5 class="card-title">Can't go back</h5>
         <p class="card-text">Single 2018</p>
         <a href="#" class="btn btn-outline-success songs" data-bs-toggle="modal" data-bs-target="#addSong"
-          data-id="1">Check it out (add Songs Test)</a>
+          data-id="1">album</a>
       </div>
     </div>
 
@@ -147,12 +146,18 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="card-favorites">
                 <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
                 <div class="card-body">
                   <h5 class="card-title">Nature</h5>
                   <p class="card-text">Single 2017</p>
+                  <a href="#" 
+                    class="btn btn-outline-success songs" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#addSong"
+                    data-id="1"
+                    >añadir</a>
                 </div>
               </div>
             </div>
@@ -165,7 +170,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="card-favorites">
                 <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
                 <div class="card-body">
@@ -174,15 +179,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="card-favorites">
-                <img src="./assets/albums/Nature_Single 2017.jpg" class="card-img-top" alt="Album picture">
-                <div class="card-body">
-                  <h5 class="card-title">Nature</h5>
-                  <p class="card-text">Single 2017</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="carousel-item">
@@ -301,8 +298,13 @@
 
   <div class="reproduction w-100 bg-dark text-white">
     <div class="col-4 reproduccion__autor">
-      <p class="reproduccion__autor-name">Autor</p>
-      <p class="reproduccion__autor-sound">nombre cancion</p>
+      <div class=" ">
+        <img id="infoImg" src="./assets/test/logo.jpg" style="width:65px" alt="">
+      </div>
+      <div class="mx-3">
+        <div class="reproduccion__autor-name">Autor</div>
+        <div class="reproduccion__autor-sound">nombre cancion</div>
+      </div>
     </div>
     <div class="col-4 reproduccion__controls">
       <audio id="audio" src="./assets/test/Foo_Fighters_All_My_Life.mp3"></audio>

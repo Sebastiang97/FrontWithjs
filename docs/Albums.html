@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/reproduction.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -109,45 +111,72 @@
       <h1>All albums</h1>
     </div>
 
-    <div class="album-cards">
-      <div class="card" style="width: 18rem">
-        <img
-          src="./assets/albums/Can't go back_Single 2018.jpg"
-          class="card-img-top"
-          alt="Album picture"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Can't go back</h5>
-          <p class="card-text">Single 2018</p>
-          <a href="#" class="btn btn-outline-success"></a>
+    <div class="album-cards my-3" id="resAlbumsInitials"></div>
+
+    <div class="reproduction w-100 bg-dark text-white">
+      <div class="col-4 reproduccion__autor">
+        <div class=" ">
+          <img
+            id="infoImg"
+            src="./assets/test/logo.jpg"
+            style="width: 65px"
+            alt=""
+          />
+        </div>
+        <div class="mx-3">
+          <div class="reproduccion__autor-name">Autor</div>
+          <div class="reproduccion__autor-sound">nombre cancion</div>
         </div>
       </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="./assets/albums/Darkside Madness_Single 2018.jpg"
-          class="card-img-top"
-          alt="Album picture"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Darkside Madness</h5>
-          <p class="card-text">Single 2018</p>
-          <a href="#" class="btn btn-outline-success">Check it out</a>
+      <div class="col-4 reproduccion__controls">
+        <audio
+          id="audio"
+          src="./assets/test/Foo_Fighters_All_My_Life.mp3"
+        ></audio>
+        <div class="audio-buttons__controls">
+          <button class="audio-buttons" id="backwardSecondsAudio">
+            <span class="material-icons md-36"> replay_10 </span>
+          </button>
+          <button class="audio-buttons" id="backwardSong">
+            <span class="material-icons md-36"> skip_previous </span>
+          </button>
+          <button class="audio-buttons" id="playAudio">
+            <span class="material-icons md-36"> play_circle </span>
+          </button>
+          <button class="audio-buttons" id="forwardSong">
+            <span class="material-icons md-36"> skip_next </span>
+          </button>
+          <button class="audio-buttons" id="forwardSecondsAudio">
+            <i class="material-icons md-36"> forward_10 </i>
+          </button>
+        </div>
+        <div class="audio-buttons__progress">
+          <input
+            type="range"
+            id="controlAudio"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+          />
         </div>
       </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="./assets/albums/Ningyo_Single 2018.jpg"
-          class="card-img-top"
-          alt="Album picture"
+      <div class="col-4 reproduccion__volume">
+        <input
+          type="range"
+          id="controlAudioVolume"
+          min="0"
+          max="100"
+          step="0.1"
+          value="100"
         />
-        <div class="card-body">
-          <h5 class="card-title">Ningyo</h5>
-          <p class="card-text">Single 2018</p>
-          <a href="#" class="btn btn-outline-success">Check it out</a>
-        </div>
       </div>
     </div>
+    <footer>
+      Made with 🤍 by <br />
+      DMV and SSG <br />
+    </footer>
+
+    <script src="./js/components/albums.js" type="module"></script>
   </body>
 </html>
