@@ -2,4 +2,64 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+}
+
+
+.reproduccion__volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reproduccion__autor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 5em;
+}
+
+.reproduccion__autor-name {
+  width: 100%;
+}
+
+.reproduccion__autor-sound {
+  width: 100%;
+}
+
+
+.reproduccion__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.audio-buttons {
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 0px;
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.audio-buttons__controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.audio-buttons__progress {
+
 }

@@ -1,0 +1,26 @@
+.about-left {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about-left img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    margin: 10px;    
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: sans-serif;
+    color:#fff;
+}
