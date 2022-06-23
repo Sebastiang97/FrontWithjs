@@ -171,43 +171,6 @@
   
 
   <div class="reproduction w-100 bg-dark text-white">
-    <div class="p-3 d-flex justify-content-start" id="infoId" data-id="1">
-        <div class="float-start ">
-            <img id="infoImg" src="./assets/test/logo.jpg" style="width:50px" alt="">
-        </div>
-        <div class="float-end mx-3 ">
-            <h5 id="infoTitle" class="m-0">All My Life</h5>
-            <small id="infoArtist" class="text-muted">Foo fighters</small>
-        </div>
-    </div>
-    <audio id="audio" src="./assets/test/Foo_Fighters_All_My_Life.mp3"></audio>
-    <section class="audio-buttons">
-      <button id="backwardSecondsAudio">-10</button>
-      <button id="backwardSong"><<</button>
-      <button id="playAudio">Play/Pause</button>
-      <button id="forwardSong">>></button>
-      <button id="forwardSecondsAudio">+10</button>
-      <input
-        type="range"
-        id="controlAudio"
-        min="0"
-        max="100"
-        step="0.1"
-        value="0"
-      />
-      <input
-        type="range"
-        id="controlAudioVolume"
-        min="0"
-        max="100"
-        step="0.1"
-        value="100"
-      />
-    </section>
-    
-  </div>
-
-  <div class="reproduction w-100 bg-dark text-white">
     <div class="col-4 reproduccion__autor" id="infoId" data-id="1">
       <div class=" ">
         <img id="infoImg" src="./assets/test/logo.jpg" style="width:65px" alt="">
@@ -230,21 +193,21 @@
               skip_previous
             </span>
           </button>
-              <button class="audio-buttons" id="playAudio">
-                <span class="material-icons md-36">
-                  play_circle
-                </span>
-              </button>
-              <button class="audio-buttons" id="forwardSong">
-                <span class="material-icons md-36">
-                  skip_next
-                </span>
-              </button>
-              <button class="audio-buttons" id="forwardSecondsAudio">
-                <i class="material-icons md-36">
-                  forward_10
-                </i>
-              </button>
+          <button class="audio-buttons" id="playAudio">
+            <span class="material-icons md-36">
+              play_circle
+            </span>
+          </button>
+          <button class="audio-buttons" id="forwardSong">
+            <span class="material-icons md-36">
+              skip_next
+            </span>
+          </button>
+          <button class="audio-buttons" id="forwardSecondsAudio">
+            <i class="material-icons md-36">
+              forward_10
+            </i>
+          </button>
         </div>
         <div class="audio-buttons__progress">
           <input type="range" id="controlAudio" min="0" max="100" step="0.1" value="0" />

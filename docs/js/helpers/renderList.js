@@ -11,13 +11,21 @@ const renderAll = () => {
   if (lists) {
     lists.map(({ id, name, owner, date }, i) => {
       res += `
+        <div class="position-relative">
+          <div class="position-absolute top-0 end-0 p-2" id="deleteList" data-id="${id}" style="z-index:100; cursor: pointer">
+            <span class="material-icons text-white " >
+            highlight_off
+            </span>
+          </div>
           <a href="./songs.html?list=${id}" class="list-group-item bg-dark border border-light text-light list-group-item-action my-3" >
-            <div class="d-flex w-100 justify-content-between">
+            <div class="d-flex w-100 justify-content-between ">
+              
               <h5 class="mb-1">Name: ${name}</h5>
-              <small>creacion: ${date}</small>
-            </div>
-            <p class="mb-1">Propietario: ${owner}</p>
+              </div>
+              <p class="mb-1">Propietario: ${owner}</p>
+              <small> ${date}</small>
           </a>
+        </div>
         `
     })
     return res

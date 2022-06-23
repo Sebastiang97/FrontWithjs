@@ -25,6 +25,11 @@
 </head>
 
 <body>
+  <style>
+    #deleteList{
+      display:none
+    }
+  </style>
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
       <nav class="navbar bg-dark">
@@ -76,10 +81,14 @@
     <div class="title-text">
       <button 
         class="btn btn-outline-success" 
+        data-bs-toggle="offcanvas" 
+        data-bs-target="#favorites"
+      >Mis Listas </button>
+      <button 
+        class="btn btn-outline-success" 
         data-bs-toggle="modal" 
         data-bs-target="#createList"
       >Create list </button>
-
     </div>
   </div>
 
