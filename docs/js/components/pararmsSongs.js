@@ -1,18 +1,37 @@
+import getParams from '../helpers/params.js'
 import { renderOneList, renderAll } from '../helpers/renderList.js'
-import { setData, getData, addSongToReproduce } from '../helpers/storage.js'
+import {
+  setData,
+  getData,
+  addSongToReproduce,
+  deleteList,
+} from '../helpers/storage.js'
 
 const listAndSongs = () => {
   setData('reproduce')
-  const search = window.location.search
-  let urlParams = new URLSearchParams(search)
-  const idList = urlParams.get('list')
-
+  const idList = getParams('list')
   const resList = document.querySelector('#resList')
   const resSong = document.querySelector('#resSong')
   const formCreateList = document.querySelector('#formCreateList')
+  const alert = document.querySelector('#alert')
 
   resSong.innerHTML = renderOneList(parseInt(idList))
   resList.innerHTML = renderAll()
+
+  const elList = document.querySelectorAll('#deleteList')
+  for (let i = 0; i < elList.length; i++) {
+    elList[i].addEventListener('click', () => {
+      const id = elList[i].dataset.id
+      console.log('hello' + id)
+      deleteList('lists', parseInt(id))
+      alert.classList.toggle('d-none')
+      alert.innerHTML = 'Lista Borrada'
+      setTimeout(() => {
+        alert.classList.toggle('d-none')
+        location.reload()
+      }, 3000)
+    })
+  }
 
   const songsToReproduce = document.querySelectorAll('#songsToReproduce')
 

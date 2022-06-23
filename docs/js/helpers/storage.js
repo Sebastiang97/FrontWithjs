@@ -32,6 +32,17 @@ const addDataList = (ref, data) => {
   localStorage.setItem(ref, JSON.stringify(oldData))
 }
 
+const deleteList = (ref, idList) => {
+  const oldData = getData(ref)
+  if (oldData.lists) {
+    console.log(oldData.lists)
+    oldData.lists = oldData.lists.filter((list) => list.id !== idList)
+    console.log(oldData.lists)
+
+    localStorage.setItem(ref, JSON.stringify(oldData))
+  }
+}
+
 const addSongToList = (ref, id, songData) => {
   const oldData = getData(ref)
   oldData.lists.map((list) => {
@@ -78,6 +89,7 @@ const addDataVolumen = (ref, data) => {
 export {
   setData,
   getData,
+  deleteList,
   addDataList,
   addDataVolumen,
   addSongToList,

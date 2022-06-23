@@ -1,16 +1,11 @@
-import { renderAlbum } from '../helpers/renderAlbum'
-import { setData, getData, addSongToReproduce } from '../helpers/storage.js'
-import { albumsInitials, getAlbumsById } from '../data/Albums.js'
+import { renderAlbum } from '../helpers/renderAlbum.js'
+import { setData, addSongToReproduce } from '../helpers/storage.js'
+import { getAlbumsById } from '../data/Albums.js'
 import getParams from '../helpers/params.js'
 
 const listAndSongs = () => {
   setData('reproduce')
-  // const search = window.location.search
-  // let urlParams = new URLSearchParams(search)
-  // const idList = urlParams.get('album')
-
   const idList = getParams('album')
-
   const resSong = document.querySelector('#resSong')
 
   resSong.innerHTML = renderAlbum(parseInt(idList))

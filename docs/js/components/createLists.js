@@ -1,4 +1,4 @@
-import { setData, addDataList } from '../helpers/storage.js'
+import { setData, addDataList, deleteList } from '../helpers/storage.js'
 import { renderAll, renderLists } from '../helpers/renderList.js'
 
 const createLists = () => {
@@ -13,6 +13,7 @@ const createLists = () => {
   resAddSong.innerHTML = renderLists()
 
   formCreateList.addEventListener('submit', (e) => {
+    console.log('hello')
     e.preventDefault()
     const list = {
       name: formCreateList.name.value,

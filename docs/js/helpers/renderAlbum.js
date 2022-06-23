@@ -67,4 +67,4 @@ const renderSongsOfAlbum = (songs, idList) => {
   return res
 }
 
-export { renderAlbum, renderAddSongsToLists as renderLists }
+export { renderAlbum }
