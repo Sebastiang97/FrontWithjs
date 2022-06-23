@@ -25,10 +25,11 @@ const createLists = () => {
     resOffCanvas.innerHTML = renderAll()
     resAddSong.innerHTML = renderLists()
 
-    console.log(alert)
+    const bsOffcanvas = new bootstrap.Offcanvas('#favorites')
     alert.classList.toggle('d-none')
     setTimeout(() => {
       alert.classList.toggle('d-none')
+      bsOffcanvas.show()
     }, 3000)
   })
 }

@@ -9,6 +9,7 @@ const listAndSongs = () => {
 
   const resList = document.querySelector('#resList')
   const resSong = document.querySelector('#resSong')
+  const formCreateList = document.querySelector('#formCreateList')
 
   resSong.innerHTML = renderOneList(parseInt(idList))
   resList.innerHTML = renderAll()
@@ -24,5 +25,9 @@ const listAndSongs = () => {
       addSongToReproduce('reproduce', songListFiltered, idList, idSong)
     })
   }
+
+  formCreateList.addEventListener('submit', (e) => {
+    window.location.reload()
+  })
 }
 listAndSongs()
