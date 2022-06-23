@@ -96,6 +96,9 @@ const renderSongs = (songs, idList) => {
         </td>
         <td class="p-3">${album}</td>
         <td class="p-3">${year}</td>
+        <td class="p-3">
+          <button class="btn btn-dark" id="songsToAlbum" data-id-album="${idList}">Listen</button>
+        </td>
       </tr>
     `
     })
@@ -146,7 +149,7 @@ const renderSongsOfAlbum = (songs, idList) => {
   songs &&
     songs.map(({ id, name, src, urlImage, artist, album, year }, index) => {
       res += ` 
-      <tr id="songsToAlbum" data-id="${id}" data-id-album="${idList}">
+      <tr   >
         <th class="p-3">${index + 1}</th>
         
         <td class="p-3 d-flex justify-content-start">
@@ -160,6 +163,9 @@ const renderSongsOfAlbum = (songs, idList) => {
         </td>
         <td class="p-3">${album}</td>
         <td class="p-3">${year}</td>
+        <td class="p-3">
+          <button class="btn btn-dark" id="songsToAlbum" data-id="${id}" data-id-album="${idList}">Listen</button>
+        </td>
       </tr>
     `
     })
