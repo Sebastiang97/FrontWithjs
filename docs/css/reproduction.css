@@ -1,5 +1,4 @@
 .reproduction {
-  position: fixed;
   bottom: 0;
   left: 0;
   height: 100px;
@@ -7,29 +6,24 @@
   display: flex;
   padding-top: 10px;
 }
-
 .reproduccion__volume {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .reproduccion__autor {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding-left: 1em;
 }
-
 .reproduccion__autor-name {
   width: 100%;
 }
-
 .reproduccion__autor-sound {
   width: 100%;
 }
-
 .reproduccion__controls {
   display: flex;
   align-items: center;

@@ -70,6 +70,48 @@ const albumsInitials = [
     artist: 'Fabian Lozano',
     urlAlbum: './assets/albums/Ningyo_Single 2018.jpg',
   },
+  {
+    id: 4,
+    album: 'Ningyo',
+    single: 'Single 2018',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/When she smiles_Single 2015.jpg',
+  },
+  {
+    id: 5,
+    album: 'Down on my mind',
+    single: 'EP 2020',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Down on my mind_2020 EP.jpg',
+  },
+  {
+    id: 6,
+    album: 'Modular Dreams',
+    single: 'Single 2018',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Modular Dreams Single 2018.jpg',
+  },
+  {
+    id: 7,
+    album: 'Red Veil',
+    single: 'Single 2019',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Red Veil_EP 2019.jpg',
+  },
+  {
+    id: 8,
+    album: 'Sweet Nightmare',
+    single: 'Single 2020',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Sweet Nightmare_ Single 2020.jpg',
+  },
+  {
+    id: 9,
+    album: 'Hashira',
+    single: 'Single 2020',
+    artist: 'Fabian Lozano',
+    urlAlbum: './assets/albums/Hashira_ Single 2020.jpg',
+  },
 ]
 
 export { albums, getAlbumsById, albumsInitials }
