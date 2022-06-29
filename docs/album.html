@@ -29,7 +29,7 @@
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
   >
 
-    <title>Kuroneko Music</title>
+    <title>album</title>
 </head>
 </head>
 
@@ -80,20 +80,119 @@
     </div>
   </nav>
 
-  <div class="title">
+  <!-- <div class="title">
 
-    <h1>All albums </h1>
+    
 
     <div class="  d-flex align-items-center ">
       <h4 class="text-white" data-bs-toggle="offcanvas" href="#favorites">Create list <i class="material-icons pt-3" style="font-size:20px;color:white;">add</i> </h4>
 
     </div>
-  </div>
+  </div> -->
 
   <div class="container-fluid my-5" >
     <div class="row">
         <!-- <div class="col-sm-4" id="resList"></div> -->
-        <div class="col-sm-12" id="resSong"></div>
+        <div class="col-sm-12" id="resSong">
+          <div class="row ">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <div class="card" style="width: 100%">
+                <img
+                  src="./assets/albums/Can't go back_Single 2018.jpg"
+                  class="card-img-top"
+                  alt="Album picture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Can't go back</h5>
+                  <p class="card-text">fabian Lozano</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8 d-flex justify-content-center">
+              <table class="table-dark table-striped" style="width:100%;">
+                <thead>
+                  <tr>
+                    <th scope="col" class="p-3">#</th>
+                    <th scope="col" class="p-3">Titulo</th>
+                    <th scope="col" class="p-3">Álbum</th>
+                    <th scope="col" class="p-3">year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="p-3">1</th>
+                    <td class="p-3 d-flex justify-content-start">
+                      <div class="float-start ">
+                        <img src="./assets/test/logo.jpg" style="width:50px" alt="">
+                      </div>
+                      <div class="float-end mx-3 ">
+                        <h5 class="m-0">Name</h5>
+                        <small class="text-muted">Fabian Lozano</small>
+                      </div>
+                    </td>
+                    <td class="p-3">Can't go back</td>
+                    <td class="p-3">2018</td>
+                    <td class="p-3">
+                      <button class="btn btn-dark" id="songsToAlbum" data-id="${id}" data-id-album="${idList}">Listen</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="p-3">2</th>
+                    <td class="p-3 d-flex justify-content-start">
+                      <div class="float-start ">
+                        <img src="./assets/test/logo.jpg" style="width:50px" alt="">
+                      </div>
+                      <div class="float-end mx-3 ">
+                        <h5 class="m-0">Name</h5>
+                        <small class="text-muted">Fabian Lozano</small>
+                      </div>
+                    </td>
+                    <td class="p-3">Can't go back</td>
+                    <td class="p-3">2018</td>
+                    <td class="p-3">
+                      <button class="btn btn-dark" id="songsToAlbum" data-id="${id}" data-id-album="${idList}">Listen</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="p-3">3</th>
+                    <td class="p-3 d-flex justify-content-start">
+                      <div class="float-start ">
+                        <img src="./assets/test/logo.jpg" style="width:50px" alt="">
+                      </div>
+                      <div class="float-end mx-3 ">
+                        <h5 class="m-0">Name</h5>
+                        <small class="text-muted">Fabian Lozano</small>
+                      </div>
+                    </td>
+                    <td class="p-3">Can't go back</td>
+                    <td class="p-3">2018</td>
+                    <td class="p-3">
+                      <button class="btn btn-dark" id="songsToAlbum" data-id="${id}" data-id-album="${idList}">Listen</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="p-3">4</th>
+                    <td class="p-3 d-flex justify-content-start">
+                      <div class="float-start ">
+                        <img src="./assets/test/logo.jpg" style="width:50px" alt="">
+                      </div>
+                      <div class="float-end mx-3 ">
+                        <h5 class="m-0">Name</h5>
+                        <small class="text-muted">Fabian Lozano</small>
+                      </div>
+                    </td>
+                    <td class="p-3">Can't go back</td>
+                    <td class="p-3">2018</td>
+                    <td class="p-3">
+                      <button class="btn btn-dark" id="songsToAlbum" data-id="${id}" data-id-album="${idList}">Listen</button>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
   
@@ -213,8 +312,8 @@
         <img id="infoImg" src="./assets/test/logo.jpg" style="width:65px" alt="">
       </div>
       <div class="mx-3">
-        <div class="reproduccion__autor-name" id="infoTitle">Autor</div>
-        <div class="reproduccion__autor-sound text-muted" id="infoArtist">nombre cancion</div>
+        <div class="reproduccion__autor-name" id="infoTitle">All My Life</div>
+        <div class="reproduccion__autor-sound text-muted" id="infoArtist">Foo Fighters</div>
       </div>
     </div>
     <div class="col-4 reproduccion__controls">
@@ -258,8 +357,8 @@
   </div>
   
 
-    <script src="js/app.js" type="module"></script>
-    <script src="./js/components/paramasAlbum.js" type="module"></script>
+    <!-- <script src="js/app.js" type="module"></script>
+    <script src="./js/components/paramasAlbum.js" type="module"></script> -->
   </body>
 </html>
 

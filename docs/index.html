@@ -101,15 +101,6 @@
       <div class="card-body">
         <h5 class="card-title">Can't go back</h5>
         <p class="card-text">Single 2018</p>
-        <a href="./album.html?album=1" class="btn btn-outline-success songs" 
-          >Album</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="./assets/albums/Can't go back_Single 2018.jpg" class="card-img-top" alt="Album picture">
-      <div class="card-body">
-        <h5 class="card-title">Can't go back</h5>
-        <p class="card-text">Single 2018</p>
         <a href="./album.html?album=1" class="btn btn-outline-success songs" >Check it out</a>
       </div>
     </div>
@@ -164,6 +155,7 @@
                     data-bs-toggle="modal" 
                     data-bs-target="#addSong"
                     data-id="1"
+                    id="btn-addSong"
                     >Add</a>
                 </div>
               </div>
@@ -179,6 +171,7 @@
                     data-bs-toggle="modal" 
                     data-bs-target="#addSong"
                     data-id="2"
+                    id="btn-addSong"
                     >Add</a>
                 </div>
               </div>
@@ -194,6 +187,7 @@
                     data-bs-toggle="modal" 
                     data-bs-target="#addSong"
                     data-id="3"
+                    id="btn-addSong"
                     >Add</a>
                 </div>
               </div>
@@ -207,8 +201,9 @@
                   <a href="#" 
                     class="btn btn-outline-success songs" 
                     data-bs-toggle="modal" 
-                    data-bs-target="#addSong"
+                    data-bs-target="#addSong" 
                     data-id="4"
+                    id="btn-addSong"
                     >Add</a>
                 </div>
               </div>
@@ -363,6 +358,21 @@
         Create List +
       </button>
       <div class="list-group  mt-3" id="resOffCanvas">
+        <div class="position-relative">
+          <div class="position-absolute top-0 end-0 p-2" id="deleteList" data-id="${id}" style="z-index:100; cursor: pointer">
+            <span class="material-icons text-white " >
+            highlight_off
+            </span>
+          </div>
+          <a href="./songs.html?list=1" class="list-group-item bg-dark border border-light text-light list-group-item-action my-3" >
+            <div class="d-flex w-100 justify-content-between ">
+              
+              <h5 class="mb-1">My first list in Kuroneko Music</h5>
+              </div>
+              <p class="mb-1">Fabian Lozano</p>
+              <small>hace 1d</small>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -377,6 +387,11 @@
         </div>
         <div class="modal-body">
           <div class="list-group  mt-3" id="resAddSong">
+            <a href="#" class="list-group-item bg-dark border border-light text-light list-group-item-action my-3" data-list="${id}" id="btn-addSong" data-bs-dismiss="modal">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">My first list in Kuroneko Music</h5>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -388,13 +403,13 @@
     <div class="modal-dialog  modal-dialog-centered">
       <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h5 class="modal-title text-white" id="createListLabel">Crea tu lista</h5>
+          <h5 class="modal-title text-white" id="createListLabel">Create your list</h5>
           <button type="button" class="btn-close bgd-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
           <form id="formCreateList">
             <div class="form-group">
-              <label class="text-white">Nombre de la lista</label>
+              <label class="text-white my-1">Name of list </label>
               <input type="text" name="name" class="form-control" placeholder="Nombre de la lista">
             </div>
             <button 
@@ -402,7 +417,7 @@
               data-bs-dismiss="modal" 
                
               class="btn btn-light my-3"
-            >Crear</button>
+            >Create</button>
           </form>
         </div>
       </div>
@@ -420,7 +435,7 @@
     Made with 🤍 by <br> DMV and SSG <br>
   </footer>
 
-  <script src="js/app.js" type="module"></script>
+  <!--<script src="js/app.js" type="module"></script>-->
 </body>
 
 </html>
